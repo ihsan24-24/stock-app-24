@@ -1,19 +1,23 @@
-import React from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 
-// const baseURL = "https://13631.fullstack.clarusway.com/";
-// export const axiosPublic = axios.create({
-//   baseURL: baseURL,
-// });
+const BASE_URL = "will write base url";
+
+//* base url buraya yazılacak end point işleme gore sonuna eklenecektir.
+export const axiosPublic = axios.create({
+  baseURL: BASE_URL,
+});
 
 const useAxios = () => {
+  //* kullanıcının reduxtaki bilgisinde token bilgisini çektik
   const { token } = useSelector((state) => state.auth);
-  const axiosWithToken = axios.create({
-    baseURL: "https://13631.fullstack.clarusway.com/",
 
+  //* axiosun serileştirilebilir özelliklerini kullanarak base axios dosyasını oluşturduk.
+  const axiosWithToken = axios.create({
+    baseURL: BASE_URL,
     headers: { Authorization: `Token ${token}` },
   });
+
   return { axiosWithToken };
 };
 

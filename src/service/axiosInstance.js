@@ -5,7 +5,7 @@ const escapedToken = JSON.parse(localStorage.getItem("persist:root"))?.token;
 const token = escapedToken && JSON.parse(escapedToken);
 
 export const axiosWithToken = axios.create({
-  baseURL: "https://13631.fullstack.clarusway.com/",
+  baseURL: "base url will write",
 
   headers: { Authorization: `Token ${token}` },
 });

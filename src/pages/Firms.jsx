@@ -23,7 +23,7 @@ const Firms = () => {
   // const { token } = useSelector((state) => state.auth);
   // const getFirms = async () => {
   //   dispatch(fetchStart())
-  //   const BASE_URL = "https://13631.fullstack.clarusway.com/";
+  //   const BASE_URL = "will write base url";
   //   try {
   //     const url = "firms"
   //     const { data } = await axios.get(`${BASE_URL}stock/firms/`, {
